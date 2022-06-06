@@ -1,0 +1,6 @@
+Leccion01: Tipos de datos y variables en Python
+Leccion02: Operadores en Python
+Leccion03: Sentencia if
+Leccion04: Ciclo while y for (palabras continue y break)
+Leccion05: tuplas, listas, set y diccionarios
+Leccion06: Funciones y funciones recursivas
