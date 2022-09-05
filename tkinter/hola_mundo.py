@@ -18,10 +18,14 @@ ventana.title('Hola Mundo')
 # Configuramos el icono de la aplicacion
 ventana.iconbitmap('icono.ico')
 
-
 #Creamos un metodo evento_click
 def evento_click():
+    boton1.config(text='Boton presionado')
     print('Ejecucion del evento_click')
+    # Creamos un nuevo boton y lo mostramos
+    boton2 = ttk.Button(ventana, text='Nuevo boton')
+    boton2.pack()
+    
 # Creamos un boton (widget), el objeto padre es la ventana
 boton1 = ttk.Button(ventana, text='Dar click', command=evento_click)
 
