@@ -22,6 +22,27 @@ entrada1.insert(0,'Introduce una cadena')
 entrada1.insert(tk.END, '.')
 
 # state='readonly' se configurar como solo lectura y no se podra modificar
-entrada1.config(state='readonly')
+# entrada1.config(state='readonly')
+
+def enviar():
+    # el metodo get obtiene el texto ingresado en la caja de texto
+    print(entrada1.get())
+    # recuperamos el texto ingresado en la caja de texto
+    # y se lo enviamos al texto del boton
+    boton1.config(text=entrada1.get())
+    # para eliminar el contenido escrito en la caja de texto
+    # se elimina desde el indice 0 hasta el final (END) de
+    # la cadena de caracteres 
+    # entrada1.delete(0,tk.END)
+
+    # Selecionar el texto de la caja de texto
+    entrada1.select_range(0, tk.END)
+    # para hacer efectiva la selecion del texto
+    entrada1.focus()
+
+# Creamos un boton para que cada vez que lo presionemos
+# nos imprima en la consola el texto ingresado, en la caja de texto
+boton1 = ttk.Button(ventana, text='Enviar', command=enviar)
+boton1.grid(row=0, column=1)
 
 ventana.mainloop()
